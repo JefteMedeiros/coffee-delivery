@@ -10,16 +10,32 @@ export const HeaderContainer = styled.header`
 
 export const ButtonContainer = styled.section`
   display: flex;
-  align-items: center;
   gap: 0.75rem;
 `;
 
-export const LocationSelect = styled.select`
+export const LocationSelect = styled.button`
+  display: flex;  
+  font-size: 16px;
+  align-items: center;
+  background-color: ${props => props.theme["light-purple"]};
+  color: ${props => props.theme["dark-purple"]};
+  padding: 8px;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  font-family: 'Roboto', sans-serif;
 
+  svg {
+    color: ${props => props.theme["purple"]};
+    margin-right: 0.25rem;
+  }
 `;
 
 export const CartButton = styled.button`
   background-color: ${props => props.theme['light-yellow']};
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: none;
 
   svg {
     color: ${props => props.theme['dark-yellow']}
