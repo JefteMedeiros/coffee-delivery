@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -6,9 +6,12 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    line-height: 130%;
   }
 
   body {
-    min-height: 100vh;
+    display: flex;
+    margin: 0 10rem;
+    flex-direction: column;
   }
 `;

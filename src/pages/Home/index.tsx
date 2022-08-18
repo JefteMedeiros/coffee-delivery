@@ -1,7 +1,9 @@
-import { Layout } from "../../layout";
+import { About } from "../../components/About";
 
 export function Home () {
   return (
-    <h1>Home</h1>
+    <div>
+      <About />
+    </div>
   )
 }
