@@ -1,22 +1,22 @@
 import { MapPin, ShoppingCart } from "phosphor-react";
-import { NavLink } from "react-router-dom";
-import { ButtonContainer, CartButton, HeaderContainer, LocationSelect } from "./styles";
+import { CartButton, CartItemCount, HeaderContainer, HeaderInteraction, Location } from "./styles";
 
 export function Header() {
   return (
     <HeaderContainer>
-      <img src="Logo.svg" />
-      <ButtonContainer>
-        <LocationSelect>
-          <MapPin size={24} weight="fill" />
+      <img src="Logo.svg" alt="" />
+      <HeaderInteraction>
+        <Location>
+          <MapPin weight="fill" size={22} />
           Porto Alegre, RS
-        </LocationSelect>
-        <NavLink to={"/initiateCheckout"}>
-          <CartButton>
-            <ShoppingCart size={32} weight={"fill"}/>
-          </CartButton>
-        </NavLink>
-      </ButtonContainer>
+        </Location>
+        <CartButton>
+          <CartItemCount>
+            2
+          </CartItemCount>
+          <ShoppingCart weight="fill" size={22} />
+        </CartButton>
+      </HeaderInteraction>
     </HeaderContainer>
-  )
+  );
 }
