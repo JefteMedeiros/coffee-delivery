@@ -2,10 +2,13 @@ import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
   display: flex;
+  position: sticky;
+  background-color: ${props => props.theme["background"]};
+  z-index: 9999;
+  top: 0;
   justify-content: space-between;
   align-items: center;
   padding: 2rem 0;
-  width: 100%;
 `;
 
 export const HeaderInteraction = styled.section`
@@ -13,7 +16,8 @@ export const HeaderInteraction = styled.section`
   gap: 0.75rem;
 
   button {
-    padding: 0.5rem;
+    display: flex;
+    padding: 8px;
     border-radius: 6px;
     border: none;
   }

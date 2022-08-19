@@ -13,23 +13,25 @@ export interface IconTypes {
 };
 
 export const AboutContainer = styled.div`
+  position: relative;
+  background-image: url("Background.png");
   display: flex;
+  gap: 3.5rem;
   padding: 5.75rem 0;
-  width: 100%;
+  max-width: 70rem;
   justify-content: space-between;
 `;
 
 export const DescriptionContainer = styled.section`
   display: flex;
-  max-width: 36.75rem;
   flex-direction: column;
-  justify-content: space-between;
 `;
 
 export const AboutTitle = styled.h1`
+  font-family: "Baloo 2", sanas-serif;
+  font-weight: 1000;
   display: block;
   color: ${props => props.theme["base-title"]};
-  font-family: "Baloo 2", sanas-serif;
   font-size: 3rem;
 `;
 
@@ -42,6 +44,7 @@ export const AboutDescription = styled.p`
 
 export const FeaturesContainer = styled.div`
   display: grid;
+  margin-top: 4.125rem;
   grid-template-columns: 14.4375rem 18.375rem;
   row-gap: 1.25rem;
   column-gap: 2.5rem;

@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
 import {
   AddOrRemove,
   ButtonContainer,
   CardContainer,
   CartButton,
   CoffeeType,
+  CoffeeTypeContainer,
   Description,
   InteractionContainer,
   Price,
@@ -12,30 +12,35 @@ import {
   Title,
 } from "./styles";
 
+import { Coffee } from "../../@types/coffee";
+
 import { Minus, Plus, ShoppingCart } from "phosphor-react";
 
-const CoffeeCard: React.FC = () => {
+export function CoffeeCard(props: Coffee) {
   return (
     <CardContainer>
-      <img src="../../../public/images/Type=Americano.png" alt="" />
-      <CoffeeType>TRADICIONAL</CoffeeType>
-      <Title>Expresso Tradicional</Title>
-      <Description>
-        O tradicional café feito com água quente e grãos moídos
-      </Description>
+      <img src={props.pic} alt="" />
+      <CoffeeTypeContainer>
+        {props.category.map((category) => {
+          return(
+            <CoffeeType>{category}</CoffeeType>
+          )
+        })}
+      </CoffeeTypeContainer>
+      <Title>{props.name}</Title>
+      <Description>{props.description}</Description>
       <InteractionContainer>
         <Price>
-          R$
-          <PriceTag>9,90</PriceTag>
+          R$ <PriceTag>{props.price.toString().replaceAll(".", ",")}</PriceTag>
         </Price>
         <ButtonContainer>
           <AddOrRemove>
             <button>
-              <Minus size={14} />
+              <Minus size={14} weight="bold" />
             </button>
             1
             <button>
-              <Plus size={14} />
+              <Plus size={14} weight="bold" />
             </button>
           </AddOrRemove>
           <CartButton>
@@ -45,6 +50,4 @@ const CoffeeCard: React.FC = () => {
       </InteractionContainer>
     </CardContainer>
   );
-};
-
-export default CoffeeCard;
+}

@@ -8,10 +8,12 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     line-height: 130%;
   }
-
+  
   body {
+    background-color: ${props => props.theme["background"]};
     display: flex;
-    margin: 0 10rem;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 `;

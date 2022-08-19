@@ -11,16 +11,20 @@ export const CardContainer = styled.div`
 
   background-color: ${(props) => props.theme["base-card"]};
   border-radius: 6px;
-  padding: 1.25rem;
-  margin-top: 34px;
+  padding: 1.25rem 1.5rem;
   border-bottom-left-radius: 36px;
   border-top-right-radius: 36px;
 
   img {
-    top: -0.9375rem;
+    top: -20px;
     position: absolute;
     width: 7.5rem;
   }
+`;
+
+export const CoffeeTypeContainer = styled.div`
+  display: flex;
+  gap: 0.25rem;
 `;
 
 export const CoffeeType = styled.span`
@@ -67,6 +71,7 @@ export const Price = styled.div`
 
 export const PriceTag = styled.span`
   font-family: "Baloo 2", sans-serif;
+  font-weight: 1000;
   font-size: 1.5rem;
 `;
 
@@ -93,7 +98,8 @@ export const AddOrRemove = styled.div`
   background-color: ${props => props.theme["base-button"]};
 
   svg {
-    color: ${props => props.theme["purple"]}
+    color: ${props => props.theme["purple"]};
+    font-weight: bold;
   }
 
   button {

@@ -5,7 +5,6 @@ import { GlobalStyles } from "./styles/global/styles";
 import { theme } from "./styles/theme/styles";
 
 export function App() {
-
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
