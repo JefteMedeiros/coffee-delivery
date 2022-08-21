@@ -1,5 +1,10 @@
 import styled from 'styled-components';
 
+export const OurCoffeesContainer = styled.section`
+  margin: auto;
+  max-width: 70rem;
+`;
+
 export const Title = styled.h1`
   font-family: "Baloo 2", sans-serif;
   font-weight: 1000;

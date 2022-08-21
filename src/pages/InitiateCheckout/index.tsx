@@ -1,5 +1,9 @@
+import { AddressForm } from "../../components/AddressForm";
+
 export function InitiateCheckout () {
   return (
-    <h1>adsfsds</h1>
+    <>
+      <AddressForm />
+    </>
   );
 }

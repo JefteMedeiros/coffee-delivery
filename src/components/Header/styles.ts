@@ -1,13 +1,19 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
-  display: flex;
+  background-color: ${(props) => props.theme["background"]};
   position: sticky;
-  background-color: ${props => props.theme["background"]};
-  z-index: 9999;
   top: 0;
+  z-index: 9999;
+`;
+
+export const HeaderContent = styled.div`
+  display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: auto;
+  max-width: 70rem;
+
   padding: 2rem 0;
 `;
 
@@ -19,7 +25,10 @@ export const HeaderInteraction = styled.section`
     display: flex;
     padding: 8px;
     border-radius: 6px;
-    border: none;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 `;
 
@@ -35,6 +44,10 @@ export const Location = styled.button`
     color: ${(props) => props.theme["purple"]};
     margin-right: 0.25rem;
   }
+
+  &:focus {
+    border: 1px solid ${(props) => props.theme["dark-purple"]};
+  }
 `;
 
 export const CartButton = styled.button`
@@ -45,13 +58,16 @@ export const CartButton = styled.button`
     color: ${(props) => props.theme["dark-yellow"]};
   }
 
+  &:focus {
+    border: 1px solid ${(props) => props.theme["dark-yellow"]};
+  }
 `;
 
 export const CartItemCount = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   position: absolute;
   bottom: 1.75rem;
   left: 1.75rem;

@@ -79,12 +79,17 @@ export const CartButton = styled.button`
   display: flex;
 
   background-color: ${props => props.theme["dark-purple"]};
-  border: none;
   border-radius: 6px;
   padding: 0.5rem;
+  transition: all 200ms;
 
   svg {
     color: ${props => props.theme["white"]};
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: ${props => props.theme["purple"]};
   }
 `;
 
@@ -105,7 +110,12 @@ export const AddOrRemove = styled.div`
   button {
     display: flex;
     background: transparent;
-    border: none;
+    transition: all 200ms;
+
+    &:hover {
+      cursor: pointer;
+      color: ${props => props.theme["dark-purple"]};
+    }
   }
 `;
 

@@ -13,18 +13,18 @@ export interface IconTypes {
 };
 
 export const AboutContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 3.5rem;
   position: relative;
   background-image: url("Background.png");
-  display: flex;
-  gap: 3.5rem;
   padding: 5.75rem 0;
-  max-width: 70rem;
-  justify-content: space-between;
 `;
 
 export const DescriptionContainer = styled.section`
   display: flex;
-  flex-direction: column;
+  max-width: 70rem;
+  flex-direction: row;
 `;
 
 export const AboutTitle = styled.h1`

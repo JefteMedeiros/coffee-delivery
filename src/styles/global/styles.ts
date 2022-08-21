@@ -8,12 +8,14 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     line-height: 130%;
   }
+
+  button, input {
+    outline: none;
+    transition: all 200ms;
+    border: 1px solid transparent;
+  }
   
   body {
     background-color: ${props => props.theme["background"]};
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
 `;
