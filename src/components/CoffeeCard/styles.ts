@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ItemCount } from "../../styles/global/styles";
 
 export const CardContainer = styled.div`
   position: relative;
@@ -98,28 +99,6 @@ export const CartButton = styled.button`
   }
 `;
 
-export const AddOrRemove = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  border-radius: 6px;
-
-  padding: 0.5625rem 0.5rem;
-  background-color: ${(props) => props.theme["base-button"]};
-
-  svg {
-    color: ${(props) => props.theme["purple"]};
-    font-weight: bold;
-  }
-
-  button {
-    display: flex;
-    background: transparent;
-    transition: all 200ms;
-
-    &:hover {
-      cursor: pointer;
-      color: ${(props) => props.theme["dark-purple"]};
-    }
-  }
+export const CardItemCount = styled(ItemCount)`
+    padding: 0.5625rem 0.5rem;
 `;

@@ -1,13 +1,12 @@
-import { Coffee, Package, ShoppingCart, Timer } from "phosphor-react";
+import { Package, ShoppingCart, Timer } from "phosphor-react";
+import { Feature } from "../Feature";
 import {
   AboutContainer,
   AboutDescription,
   AboutTitle,
   DescriptionContainer,
   FeaturesContainer,
-  FeatureIcon,
   ImageContainer,
-  Feature,
   SmallDeviceImg,
 } from "./styles";
 
@@ -29,30 +28,10 @@ export function About() {
             <img src="Imagem.png" alt="" />
           </SmallDeviceImg>
           <FeaturesContainer>
-            <Feature>
-              <FeatureIcon iconColor="darkYellow">
-                <ShoppingCart weight="fill" />
-              </FeatureIcon>{" "}
-              Compra simples e segura
-            </Feature>
-            <Feature>
-              <FeatureIcon iconColor="gray">
-                <Package weight="fill" />
-              </FeatureIcon>
-              Embalagem mantém o café intacto
-            </Feature>
-            <Feature>
-              <FeatureIcon iconColor="yellow">
-                <Timer weight="fill" />
-              </FeatureIcon>
-              Entrega rápida e rastreada
-            </Feature>
-            <Feature>
-              <FeatureIcon iconColor="purple">
-                <Coffee weight="fill" />
-              </FeatureIcon>
-              O café chega fresquinho até você
-            </Feature>
+            <Feature feature="Compra simples e segura" />
+            <Feature feature="Embalagem mantém o café intacto" />
+            <Feature feature="Entrega rápida e rastreada" />
+            <Feature feature="O café chega fresquinho até você" />
           </FeaturesContainer>
         </div>
         <ImageContainer>

@@ -1,9 +1,7 @@
-import { AddressForm } from "../../components/AddressForm";
+import { Checkout } from "../../components/Checkout";
 
 export function InitiateCheckout () {
   return (
-    <>
-      <AddressForm />
-    </>
+    <Checkout />
   );
 }

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { PurpleButton } from "../../styles/global/styles";
 
 export const HeaderContainer = styled.header`
   background-color: ${(props) => props.theme["background"]};
@@ -33,21 +34,13 @@ export const HeaderInteraction = styled.section`
   }
 `;
 
-export const Location = styled.button`
-  display: flex;
-  align-items: center;
-
+export const Location = styled(PurpleButton)`
   font-size: 0.875rem;
   color: ${(props) => props.theme["dark-purple"]};
   background-color: ${(props) => props.theme["light-purple"]};
 
   svg {
-    color: ${(props) => props.theme["purple"]};
     margin-right: 0.25rem;
-  }
-
-  &:focus {
-    border: 1px solid ${(props) => props.theme["dark-purple"]};
   }
 `;
 

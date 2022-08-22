@@ -1,7 +1,7 @@
 import {
-  AddOrRemove,
   ButtonContainer,
   CardContainer,
+  CardItemCount,
   CartButton,
   CoffeeType,
   CoffeeTypeContainer,
@@ -34,7 +34,7 @@ export function CoffeeCard(props: Coffee) {
           R$ <PriceTag>{props.price.toString().replaceAll(".", ",")}</PriceTag>
         </Price>
         <ButtonContainer>
-          <AddOrRemove>
+          <CardItemCount>
             <button>
               <Minus size={14} weight="bold" />
             </button>
@@ -42,7 +42,7 @@ export function CoffeeCard(props: Coffee) {
             <button>
               <Plus size={14} weight="bold" />
             </button>
-          </AddOrRemove>
+          </CardItemCount>
           <CartButton>
             <ShoppingCart size={22} weight="fill" />
           </CartButton>
