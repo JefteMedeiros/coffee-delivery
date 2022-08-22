@@ -11,12 +11,12 @@ export const CardContainer = styled.div`
 
   background-color: ${(props) => props.theme["base-card"]};
   border-radius: 6px;
-  padding: 1.25rem 1.5rem;
+  padding: 1.25rem;
   border-bottom-left-radius: 36px;
   border-top-right-radius: 36px;
 
   img {
-    top: -20px;
+    top: -1.25rem;
     position: absolute;
     width: 7.5rem;
   }
@@ -38,7 +38,7 @@ export const CoffeeType = styled.span`
 `;
 
 export const Title = styled.h1`
-  color: ${props => props.theme["base-subtitle"]};
+  color: ${(props) => props.theme["base-subtitle"]};
   font-family: "Baloo 2", sans-serif;
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
@@ -47,7 +47,7 @@ export const Title = styled.h1`
 export const Description = styled.h2`
   font-size: 0.875rem;
   font-weight: lighter;
-  color: ${props => props.theme["base-label"]};
+  color: ${(props) => props.theme["base-label"]};
 `;
 
 export const InteractionContainer = styled.div`
@@ -56,16 +56,21 @@ export const InteractionContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
+
+  @media screen and (max-width: 910px) {
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+  }
 `;
 
 export const ButtonContainer = styled.span`
   display: flex;
-  align-items: center;
   gap: 0.5rem;
 `;
 
 export const Price = styled.div`
-  color: ${props => props.theme["base-text"]};
+  color: ${(props) => props.theme["base-text"]};
   font-size: 0.875rem;
 `;
 
@@ -78,18 +83,18 @@ export const PriceTag = styled.span`
 export const CartButton = styled.button`
   display: flex;
 
-  background-color: ${props => props.theme["dark-purple"]};
+  background-color: ${(props) => props.theme["dark-purple"]};
   border-radius: 6px;
   padding: 0.5rem;
   transition: all 200ms;
 
   svg {
-    color: ${props => props.theme["white"]};
+    color: ${(props) => props.theme["white"]};
   }
 
   &:hover {
     cursor: pointer;
-    background-color: ${props => props.theme["purple"]};
+    background-color: ${(props) => props.theme["purple"]};
   }
 `;
 
@@ -100,10 +105,10 @@ export const AddOrRemove = styled.div`
   border-radius: 6px;
 
   padding: 0.5625rem 0.5rem;
-  background-color: ${props => props.theme["base-button"]};
+  background-color: ${(props) => props.theme["base-button"]};
 
   svg {
-    color: ${props => props.theme["purple"]};
+    color: ${(props) => props.theme["purple"]};
     font-weight: bold;
   }
 
@@ -114,9 +119,7 @@ export const AddOrRemove = styled.div`
 
     &:hover {
       cursor: pointer;
-      color: ${props => props.theme["dark-purple"]};
+      color: ${(props) => props.theme["dark-purple"]};
     }
   }
 `;
-
-

@@ -8,6 +8,7 @@ import {
   FeatureIcon,
   ImageContainer,
   Feature,
+  SmallDeviceImg,
 } from "./styles";
 
 export function About() {
@@ -24,6 +25,9 @@ export function About() {
               qualquer hora
             </AboutDescription>
           </div>
+          <SmallDeviceImg>
+            <img src="Imagem.png" alt="" />
+          </SmallDeviceImg>
           <FeaturesContainer>
             <Feature>
               <FeatureIcon iconColor="darkYellow">
