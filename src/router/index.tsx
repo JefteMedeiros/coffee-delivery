@@ -2,7 +2,7 @@ import { Routes, Route} from "react-router-dom";
 import { Layout } from "../layout";
 import { Home } from "../pages/Home";
 import { InitiateCheckout } from "../pages/InitiateCheckout";
-import { OrderSuccessful } from "../pages/OrderSuccessful";
+import { PaymentSuccessful } from "../pages/PaymentSuccessful";
 
 export function Router() {
   return (
@@ -10,7 +10,7 @@ export function Router() {
       <Route path="/" element={<Layout />}>
         <Route element={<Home />} path="/" />
         <Route element={<InitiateCheckout />} path="/initiateCheckout" />
-        <Route element={<OrderSuccessful />} path="/orderSuccessful" />
+        <Route element={<PaymentSuccessful />} path="/orderSuccessful" />
       </Route>
     </Routes>
   )

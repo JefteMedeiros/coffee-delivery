@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { FormTitle } from "../../styles/global/styles";
 import { CheckoutInfo } from "../CheckoutInfo";
 import { Coffee } from "../Coffee";
@@ -18,7 +19,9 @@ export function ConfirmOrder() {
           <Coffee name="Expresso Tradicional" price={9.99} pic="images/expresso.png" />
         </SelectedCoffees>
         <CheckoutInfo />
-        <ConfirmOrderButton>CONFIRMAR PEDIDO</ConfirmOrderButton>
+        <Link to="/OrderSuccessful">
+          <ConfirmOrderButton>CONFIRMAR PEDIDO</ConfirmOrderButton>
+        </Link>
       </ConfirmOrderBox>
     </ConfirmOrderContainer>
   );

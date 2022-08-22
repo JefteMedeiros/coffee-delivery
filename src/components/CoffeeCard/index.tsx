@@ -8,13 +8,13 @@ import {
   Description,
   InteractionContainer,
   Price,
-  PriceTag,
-  Title,
+  PriceTag
 } from "./styles";
 
 import { Coffee } from "../../@types/coffee";
 
 import { Minus, Plus, ShoppingCart } from "phosphor-react";
+import { Title } from "../../styles/global/styles";
 
 export function CoffeeCard(props: Coffee) {
   return (

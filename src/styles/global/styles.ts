@@ -1,4 +1,6 @@
 import styled, { createGlobalStyle } from "styled-components";
+import { infoLogoColors, InfoLogoProps } from "../../@types/orderinfo";
+import { IconProps, iconVariations } from "../../@types/features";
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -17,6 +19,10 @@ export const GlobalStyles = createGlobalStyle`
   
   body {
     background-color: ${(props) => props.theme["background"]};
+  }
+
+  a {
+    text-decoration: none;
   }
 `;
 
@@ -91,4 +97,60 @@ export const ItemCount = styled.div`
       color: ${(props) => props.theme["dark-purple"]};
     }
   }
+`;
+
+export const Container = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+  color: ${(props) => props.theme["base-text"]};
+`;
+
+export const FeatureIcon = styled.span<IconProps>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  ${(props) => `background-color: ${iconVariations[props.color]}`};
+  color: ${(props) => props.theme["white"]};
+  border-radius: 9999px;
+  padding: 0.5rem;
+`;
+
+export const OrderInfoContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+`;
+
+export const InfoLogo = styled.span<InfoLogoProps>`
+  display: flex;
+  border-radius: 9999px;
+  padding: 0.5rem;
+  ${(props) => {
+    return `background-color: ${infoLogoColors[props.color]}`;
+  }};
+
+  svg {
+    color: ${(props) => props.theme["white"]};
+  }
+`;
+
+export const OrderInfoText = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const HighlightedText = styled.h4`
+  font-size: 1rem;
+  color: ${(props) => props.theme["base-text"]};
+  font-weight: bold;
+`;
+
+export const Title = styled.h1`
+  color: ${(props) => props.theme["base-subtitle"]};
+  font-family: "Baloo 2", sans-serif;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
 `;

@@ -1,5 +1,8 @@
-import { Package, ShoppingCart, Timer } from "phosphor-react";
-import { Feature } from "../Feature";
+import { FeatureCart } from "../FeatureCart";
+import { FeatureClock } from "../FeatureClock";
+import { FeatureCoffee } from "../FeatureCoffee";
+import { FeaturePackage } from "../FeaturePackage";
+
 import {
   AboutContainer,
   AboutDescription,
@@ -28,10 +31,10 @@ export function About() {
             <img src="Imagem.png" alt="" />
           </SmallDeviceImg>
           <FeaturesContainer>
-            <Feature feature="Compra simples e segura" />
-            <Feature feature="Embalagem mantém o café intacto" />
-            <Feature feature="Entrega rápida e rastreada" />
-            <Feature feature="O café chega fresquinho até você" />
+            <FeatureCart color="darkYellow" feature="Compra simples e segura"></FeatureCart>
+            <FeaturePackage color="gray" feature="Embalagem mantém o café intacto" />
+            <FeatureClock color="yellow" feature="Entrega rápida e rastreada" />
+            <FeatureCoffee color="purple" feature="O café chega fresquinho até você" />
           </FeaturesContainer>
         </div>
         <ImageContainer>

@@ -38,13 +38,6 @@ export const CoffeeType = styled.span`
   background-color: ${(props) => props.theme["light-yellow"]};
 `;
 
-export const Title = styled.h1`
-  color: ${(props) => props.theme["base-subtitle"]};
-  font-family: "Baloo 2", sans-serif;
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-`;
-
 export const Description = styled.h2`
   font-size: 0.875rem;
   font-weight: lighter;
